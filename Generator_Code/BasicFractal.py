@@ -40,16 +40,16 @@ def update_pos():
 
 def draw_fractal(n):
     if n <= 0:
-        turt.forward(80)
+        turt.forward(5)
         update_pos()
         turt.left(45)
-        turt.forward(80)
+        turt.forward(5)
         update_pos()
         turt.right(90)
-        turt.forward(80)
+        turt.forward(5)
         update_pos()
         turt.left(45)
-        turt.forward(80)
+        turt.forward(5)
         update_pos()
     else:
         draw_fractal(n-1)
@@ -62,7 +62,7 @@ def draw_fractal(n):
 
 
 draw_fractal(4)
-# print(farthest_pos)
+print(farthest_pos)
 canvas.scale("all", START_POS[0], START_POS[1],
              WIDTH / farthest_pos[0], HEIGHT / farthest_pos[1])
 
