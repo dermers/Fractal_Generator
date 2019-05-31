@@ -58,9 +58,9 @@ def draw_fractal(n = 0):
         draw_fractal(n - 1)
 
 
-draw_fractal(1)
-print(farthest_pos)
-canvas.scale("all", START_POS[0], -START_POS[1],
-             WIDTH / farthest_pos[0], (HEIGHT / farthest_pos[1]) / 1.1)
+draw_fractal(3)
+# print(farthest_pos)
+scale = min(WIDTH / farthest_pos[0], (HEIGHT / farthest_pos[1]) / 1.1)
+canvas.scale('all', START_POS[0], -START_POS[1], scale, scale)
 
 root.mainloop()
