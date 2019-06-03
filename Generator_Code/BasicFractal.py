@@ -27,6 +27,7 @@ turt.down()
 
 farthest_pos = [0, 0]
 
+
 def update_pos():
     tpos = turt.pos()
     pos = [tpos[0] - START_POS[0], tpos[1] - START_POS[1]]
@@ -34,6 +35,7 @@ def update_pos():
         farthest_pos[0] = pos[0]
     if abs(pos[1]) > abs(farthest_pos[1]):
         farthest_pos[1] = pos[1]
+
 
 def draw_fractal(n = 0):
     if n <= 0:
